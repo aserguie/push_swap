@@ -6,7 +6,7 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 17:18:34 by aserguie          #+#    #+#             */
-/*   Updated: 2018/03/13 12:07:33 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 17:19:33 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,9 @@ typedef struct	s_set
 	int			frequence;
 }				t_set;
 
-void			ft_set(t_set *set, t_set *game_set);
 void			ft_free_set(t_set *set);
+void			ft_set(t_set *set, t_set *game_set);
+void			ft_display_stacks(t_set *set, int a_emptied);
 int				ft_index(t_stack **stack);
 int				ft_parse_flags(int ac, char **av, t_set **st_a);
 int				ft_parse(int ac, char **av, t_set **set);
@@ -79,5 +80,4 @@ int				ft_limits(char ***param);
 long			ft_atoi_l(const char *str);
 void			ft_display_instruction(t_stack **lst);
 int				ft_target(t_set *set, t_cdll *stack_a, int a_emptied);
-void			ft_put_str_color(char *str, t_cdll *stack, int col, int tar);
 #endif

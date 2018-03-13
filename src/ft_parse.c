@@ -6,7 +6,7 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 15:39:39 by aserguie          #+#    #+#             */
-/*   Updated: 2018/03/13 15:07:50 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 18:03:53 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,8 +106,9 @@ int		ft_parse_links(char ***param, t_stack **st_a)
 int		ft_parse(int ac, char **av, t_set **set)
 {
 	char	***param;
-	int		flags = 1;
+	int		flags;
 
+	flags = 1;
 	param = NULL;
 	flags = (ft_strcmp(av[0], "./push_swap") ?
 			ft_parse_flags(ac, av, set) : 1);

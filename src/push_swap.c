@@ -6,7 +6,7 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 17:13:02 by aserguie          #+#    #+#             */
-/*   Updated: 2018/03/12 20:32:55 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 16:57:29 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@ int		main(int ac, char **av)
 		write(1, "Error\n", 6);
 	else
 	{
-		if (set->stack_a->first != NULL && !ft_sorted(&set->stack_a, &set->stack_b))
+		if (set->stack_a->first != NULL && !ft_sorted(&set->stack_a,
+					&set->stack_b))
 		{
 			ft_instruction(&(set->instru), 0);
-			//		set->stack_a->len <= 5 ? ft_short(&set->stack_a, &set->stack_b, &set->instru)
-			//			: 
-			ft_long(&(set->stack_a), &(set->stack_b), &(set->instru));
+			set->stack_a->len <= 5 ? ft_short(&set->stack_a, &set->stack_b,
+					&set->instru) : ft_long(&(set->stack_a), &(set->stack_b),
+						&(set->instru));
 			ft_merge(&(set->stack_a), &(set->stack_b), &(set->instru));
 			ft_display_instruction(&(set->instru));
 		}

@@ -6,27 +6,11 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 16:52:05 by aserguie          #+#    #+#             */
-/*   Updated: 2018/02/22 18:17:56 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 16:58:37 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
-//void	ft_swap(t_stack **stack)
-//{
-//	int		data;
-//	int		index;
-//
-//	if ((*stack)->len >= 2)
-//	{
-//		data = (*stack)->first->data;
-//		index = (*stack)->first->index;
-//		(*stack)->first->data = (*stack)->first->next->data;
-//		(*stack)->first->index = (*stack)->first->next->index;
-//		(*stack)->first->next->data = data;
-//		(*stack)->first->next->index = index;
-//	}
-//}
 
 void	ft_swap(t_stack **stack)
 {

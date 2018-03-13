@@ -6,7 +6,7 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 17:14:22 by aserguie          #+#    #+#             */
-/*   Updated: 2018/03/12 16:47:19 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 17:05:06 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int		ft_add_if(t_stack **lst, int instru)
 {
-	if ((((*lst)->first->data + instru == 0) && ((*lst)->first->next && (*lst)->first->next->data != -1) && ((*lst)->first->data != -1))
+	if ((((*lst)->first->data + instru == 0) && ((*lst)->first->next &&
+					(*lst)->first->next->data != -1) &&
+				((*lst)->first->data != -1))
 			|| (*lst)->first->data + instru == 18
 			|| (*lst)->first->data + instru == 20
 			|| (*lst)->first->data + instru == 38)

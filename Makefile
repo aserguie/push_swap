@@ -6,7 +6,7 @@
 #    By: aserguie <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/20 17:36:50 by aserguie          #+#    #+#              #
-#    Updated: 2018/03/12 10:27:36 by aserguie         ###   ########.fr        #
+#    Updated: 2018/03/13 17:29:04 by aserguie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRC = 	ft_set.c \
 		ft_target.c \
 		ft_merge.c \
 		ft_sorted.c \
-		ft_put_str_color.c \
+		ft_display_stacks.c \
 		ft_parse_flags.c \
 		ft_free_set.c \
 		ft_min_max.c

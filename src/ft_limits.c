@@ -6,7 +6,7 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 17:41:56 by aserguie          #+#    #+#             */
-/*   Updated: 2018/02/08 18:23:32 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 18:03:55 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int		ft_limits(char ***param)
 		j = 0;
 		while (param[i][j])
 		{
-			if (ft_atoi_l(param[i][j]) > INT_MAX
+			if ((ft_isdigit(param[i][j][0]) && ft_strlen(param[i][j]) > 10)
+					|| ft_atoi_l(param[i][j]) > INT_MAX
+					|| ft_strlen(param[i][j]) > 11
 					|| ft_atoi_l(param[i][j]) < INT_MIN)
 				return (0);
 			j++;

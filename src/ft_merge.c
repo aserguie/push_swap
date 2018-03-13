@@ -6,7 +6,7 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 16:00:54 by aserguie          #+#    #+#             */
-/*   Updated: 2018/03/08 19:34:34 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 17:02:41 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,11 +106,6 @@ int		ft_merge(t_stack **st_a, t_stack **st_b, t_stack **lst)
 {
 	if ((*st_b)->first)
 	{
-//		while((*st_b)->first)
-//		{
-//			printf("%d ",(*st_b)->first->data);
-//			(*st_b)->first = (*st_b)->first->next;
-//		}
 		ft_pop_node_cdll(st_b, st_a);
 		ft_instruction(lst, 1);
 	}

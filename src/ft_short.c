@@ -6,7 +6,7 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 15:06:09 by aserguie          #+#    #+#             */
-/*   Updated: 2018/03/12 16:46:58 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 15:56:40 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,9 @@ int	ft_three(t_stack **curr, t_stack **lst)
 
 int	ft_five(t_stack **curr, t_stack **help, t_stack **lst)
 {
-	if ((*help)->len == 3)
+	if ((*help)->len == 2)
 		return (0);
-	if ((*curr)->first->data < (*curr)->first->next->data
-			&& (*curr)->first->data < (*curr)->last->data)
+	if ((*curr)->first->index <= 2)
 	{
 		ft_pop_node_cdll(curr, help);
 		ft_instruction(lst, -1);
