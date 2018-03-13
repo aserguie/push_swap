@@ -6,7 +6,7 @@
 /*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 17:23:45 by aserguie          #+#    #+#             */
-/*   Updated: 2018/03/13 13:27:57 by aserguie         ###   ########.fr       */
+/*   Updated: 2018/03/13 15:10:27 by aserguie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,13 +71,23 @@ char	*ft_str_space_cat(char *s1, char *s2)
 	return (res2);
 }
 
+void		ft_free_line(char *s1, char *s2)
+{
+	if (s1)
+		free(s1);
+	printf("kjhfkjsdfh\n");
+	if (s2)
+		free(s2);
+	printf("kjhfkjsdfh\n");
+}
+
 void		ft_checker(char *line, t_set *set)
 {
 	int		i;
 	int		a_emptied;
 	char	*total;
 
-	total = (char*)malloc(sizeof(total));;
+	total = ft_strdup("");
 	i = 0;
 	a_emptied = 0;
 	while (get_next_line(0, &line))
@@ -85,17 +95,21 @@ void		ft_checker(char *line, t_set *set)
 		if (!ft_check_commands(line, &set->stack_a, &set->stack_b))
 		{
 			write(1, "Error\n", 6);
-			free(line);
+			ft_free_line(total, line);
+//			free(line);
+			ft_free_set(set);
 			exit (-1);
 		}
 		else
 			i++;
 		total = ft_str_space_cat(total, line);
+//		free(line);
 		if (set->stack_a->len == 0)
 			a_emptied = 1;
 		ft_if_display(&total, i, a_emptied, set);
 	}
-	free(total);
+	free (total);
+//	ft_free_line(total, line);
 //	free(line);
 }
 
