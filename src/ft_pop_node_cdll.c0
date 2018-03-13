@@ -1,0 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_pop_node_cdll.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aserguie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/01 15:06:03 by aserguie          #+#    #+#             */
+/*   Updated: 2018/03/08 12:06:58 by aserguie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../inc/push_swap.h"
+
+void	ft_pop_node_cdll(t_stack **st_1, t_stack **st_2)
+{
+	if ((*st_1)->first != NULL)
+	{
+		ft_push_back_cdll(st_2, st_1);
+	printf("pushed_0\n");
+		ft_erase_node_cdll(st_1);
+	printf("erased_0\n");
+	}
+	printf("popped_0\n");
+}
